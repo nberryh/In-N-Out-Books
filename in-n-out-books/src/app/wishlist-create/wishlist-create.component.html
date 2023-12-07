@@ -1,0 +1,25 @@
+<!--
+  Title: wishlist-create.component.html
+  Author: Nolan Berryhill
+  Date: 12/03/2023
+  Description: Index for wishlist-create form
+-->
+
+<!-- Form for wishlist create -->
+<form fxLayout="column" class="wishlist-create-form">
+
+  <!-- Form field for title -->
+  <mat-form-field fxFlex appearance="fill">
+    <mat-label>Title</mat-label>
+    <input type="text" name="title" matInput [(ngModel)]="item.title" />
+  </mat-form-field>
+
+  <!-- Form field for authors -->
+  <mat-form-field fxFlex appearance="fill">
+    <mat-label>Authors</mat-label>
+    <input type="text" name="authors" matInput [(ngModel)]="item.authors" />
+  </mat-form-field>
+
+  <!-- Button -->
+  <button mat-button color="primary" (click)="addItem()">Add item</button>
+</form>

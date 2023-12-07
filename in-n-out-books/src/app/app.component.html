@@ -1,0 +1,46 @@
+<!--
+  Title: app.component.html
+  Author: Nolan Berryhill
+  Date: 12/03/2023
+  Description: Index for app in in n out book
+-->
+
+<!-- Toolbar for html -->
+<mat-toolbar class="mat-toolbar">
+  <mat-toolbar-row>
+    <div class="log">
+
+      <!-- Img for page -->
+      <img src="./assets/In-N-Out books Logo.png" height="80" alt="In-n-out books logo" />
+    </div>
+    <div style="width: 80%;">
+      <!-- Links for toolbar-->
+      <div fxLayout="row wrap" fxLAyoutAlign="end start">
+        <button mat-button routerLink="/book-list">Book List</button>
+        <button mat-button routerLink="/wishlist">Wishlist</button>
+        <button mat-button routerLink="/contact">Contact</button>
+        <button mat-button routerLink="/about">About</button>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<br>
+
+<!-- Title of assignment -->
+<div fxLayout="row wrap">
+  <div fxFlex>
+    <mat-card class="main-container">
+      <mat-card-title class="blue">
+        {{ assignment }}
+      </mat-card-title>
+
+      <br>
+      <br>
+
+      <mat-card-content>
+        <router-outlet></router-outlet>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

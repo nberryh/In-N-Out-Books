@@ -1,0 +1,73 @@
+/**
+  Title: styles.scss
+  Author: Nolan Berryhill
+  Date: 11/19/2023
+  Description: Styles for in n out books
+*/
+
+/**
+  Imports items from theme
+*/
+@import './theme';
+
+/**
+  Height style
+*/
+html, body {
+  height: 100%;
+}
+
+/**
+  Margin and font-family for body
+*/
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/**
+  Color for blue
+*/
+.blue {
+  color: #2196F3;
+}
+
+/**
+  IColor for green
+*/
+.green {
+  color: #66BB6A;
+}
+
+/**
+  Text-decoration and color for attribution-link
+*/
+.attribution-link {
+  text-decoration: none;
+  color: white;
+}
+
+.attribution-link:hover {
+  text-decoration: underline;
+}
+
+/**
+  Text-align and font-size for card-title-icon
+*/
+.card-title-icon {
+  text-align: center;
+}
+
+.card-title-icon .mat-icon {
+  font-size: 72px;
+}
+
+/**
+  Text-align for align-center
+*/
+.align-center {
+  text-align: center;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
