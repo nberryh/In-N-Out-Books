@@ -4,12 +4,11 @@
 // Description: TS file for book list
 
 // Angular specific imports
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IBook } from '../book.interface';
 import { BooksService } from '../books.service';
 import { MatDialog } from '@angular/material/dialog';
 import { BookDetailDialogComponent } from '../book-detail-dialog/book-detail-dialog.component';
-import { HttpClient } from '@angular/common/http';
 
 // Selector, template, styleUrls for component
 @Component({
@@ -21,13 +20,13 @@ import { HttpClient } from '@angular/common/http';
 // Export for BookListComponent
 export class BookListComponent {
 
-  // Variable comfirm for books and book
+  // Variable confirm for books and book
   books: IBook[] = [];
 
   book: IBook | null | undefined;
 
   // Constructor for booksService and Books
-  constructor(private booksService: BooksService, private dialog: MatDialog, private http: HttpClient) {
+  constructor(private booksService: BooksService, private dialog: MatDialog) {
 
     this.booksService.getBooks().subscribe((res: any) => {
       for (let key in res) {
@@ -54,7 +53,7 @@ export class BookListComponent {
   // Show book details
   showBookDetails(event: Event, isbn: string) {
     event.preventDefault();
-    this.book = this.books.find((book) => book.isbn === isbn);
+    this.book = this.books.find(book => book.isbn === isbn);
 
     this.dialog.open(BookDetailDialogComponent, {
       data: { book: this.book }
