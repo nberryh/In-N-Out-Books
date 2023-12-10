@@ -17,12 +17,13 @@
   <!-- Container -->
   <div class="grid-container">
 
+    <!-- ng-container for html information of book -->
     <ng-container *ngFor="let book of books">
-      <div fxLayout="row wrap" fxLayoutGap="16px grid">      <mat-card class="grid-container__item">
+      <div fxLayout="row wrap" fxLayoutGap="16px grid">      <mat-card class="grid-container_item">
 
-        <!-- Changed the class to blue to be easier to read ont the darker background -->
+        <!-- Click event for the book.title -->
         <mat-card-title>
-          <a href="#" (click)="showBookDetails($event, book.isbn)" class="grid-container__ahref blue">{{book.title}}</a>
+          <a href="#" (click)="showBookDetails($event, book.isbn)" class="grid-container_ahref blue">{{book.title}}</a>
         </mat-card-title>
         <mat-card-content>
           <!-- Mat list for ISBN, Pages, and Authors -->

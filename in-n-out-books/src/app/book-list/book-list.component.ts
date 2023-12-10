@@ -54,7 +54,7 @@ export class BookListComponent {
   // Show book details
   showBookDetails(event: Event, isbn: string) {
     event.preventDefault();
-    const book = this.books.find((b) => b.isbn === isbn);
+    this.book = this.books.find((book) => book.isbn === isbn);
 
     this.dialog.open(BookDetailDialogComponent, {
       data: { book: this.book }
